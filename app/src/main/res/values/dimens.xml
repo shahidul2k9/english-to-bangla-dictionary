@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="card_view_radius">5dp</dimen>
+    <dimen name="line_spacing_in_details">10dp</dimen>
+
+    <dimen name="list_item_padding_top">2dp</dimen>
+    <dimen name="list_item_padding_bottom">2dp</dimen>
+    <dimen name="list_item_padding_left">15dp</dimen>
+    <dimen name="list_item_padding_right">15dp</dimen>
+</resources>

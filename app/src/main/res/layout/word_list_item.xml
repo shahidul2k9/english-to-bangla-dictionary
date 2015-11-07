@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ripple_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/list_item_padding_top"
+    android:paddingBottom="@dimen/list_item_padding_bottom"
+    android:paddingLeft="@dimen/list_item_padding_left"
+    android:paddingRight="@dimen/list_item_padding_right">
+
+    <TextView
+        android:id="@+id/from_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="From Word"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/to_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/from_word"
+        android:text="To word"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/favorite"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/favorite" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/item_divider" />
+</RelativeLayout>

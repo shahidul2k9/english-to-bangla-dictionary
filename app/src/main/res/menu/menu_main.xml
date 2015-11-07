@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_rate_me"
+        android:title="@string/rate_me"
+        android:orderInCategory="100"
+        local:showAsAction="never"/>
+    <item android:id="@+id/more_apps"
+        android:title="@string/more_apps"
+        android:orderInCategory="100"
+        local:showAsAction="never"/>
+
+
+</menu>

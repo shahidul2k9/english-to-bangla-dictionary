@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">English to Bangla</string>
+    <string name="rate_me">Rate Me</string>
+    <string name="no_word_found">No Word Found</string>
+    <string name="no_favorite_word_found">No Favorite Word</string>
+
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="add_new_word">Add New Word</string>
+    <string name="exit">Exit</string>
+
+    <string name="empty"></string>
+
+    <string name="from_word">English Word</string>
+    <string name="to_meaning">Bangla Meaning</string>
+    <string name="from_word2">Bangla Word</string>
+    <string name="to_meaning2">English Meaning</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="word_added">Word Added</string>
+    <string name="word_updated">Word Updated</string>
+    <string name="from_word_require">English word require</string>
+    <string name="to_meaning_require">Bangla meaning require</string>
+    <string name="from_word_require2">Bangla word require</string>
+    <string name="to_meaning_require2">English meaning require</string>
+
+    <string name="first_language">English</string>
+    <string name="second_language">Bangla</string>
+    <string name="delete_word">Delete word</string>
+    <string name="sure_to_delete_word">Are you sure to delete this word?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="more_apps">More Apps</string>
+
+    <string name="add_unit_banner">ca-app-pub-8904861399331639/3585853502</string>
+</resources>
