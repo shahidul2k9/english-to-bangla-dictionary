@@ -80,9 +80,11 @@ public class HomeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        if (searchView.isSearchOpen()){
-            toolBar.setVisibility(View.GONE);
+        if (!searchView.isSearchOpen()){
+            searchView.showSearch();
         }
+        toolBar.setVisibility(View.GONE);
+        mainActivity.hideSoftKeyboard();
     }
 
     @Override
@@ -169,6 +171,7 @@ public class HomeFragment extends Fragment {
             holder.wordContainer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    mainActivity.hideSoftKeyboard();
                     mainActivity.onClickWord(word.getId());
                 }
             });

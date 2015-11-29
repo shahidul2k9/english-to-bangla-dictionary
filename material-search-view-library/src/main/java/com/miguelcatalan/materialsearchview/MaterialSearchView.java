@@ -23,6 +23,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -203,6 +204,16 @@ public class MaterialSearchView extends FrameLayout implements Filter.FilterList
                     showKeyboard(mSearchSrcTextView);
                     showSuggestions();
                 }
+            }
+        });
+        mSearchSrcTextView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                    hideKeyboard(mSearchSrcTextView);
+                    return true;
+                }
+                return false;
             }
         });
     }
