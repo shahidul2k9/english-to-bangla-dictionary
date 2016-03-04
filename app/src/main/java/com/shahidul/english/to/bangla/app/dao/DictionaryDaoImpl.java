@@ -54,7 +54,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
     @Override
     public List<Word> getWordListByPrefixMatching(String prefix) {
         Cursor cursor = sqLiteDatabase.query(Util.getCurrentTableName(),new String[]{Database.COLUMN_ID, Database.COLUMN_FROM, Database.COLUMN_TO, Database.COLUMN_FAVORITE},
-                Database.COLUMN_FROM + " LIKE ?",new String[]{prefix + "%"},null,null,Database.COLUMN_FROM);
+                Database.COLUMN_FROM + " LIKE ?",new String[]{prefix + "%"},null,null,Database.COLUMN_FROM + " COLLATE NOCASE ASC");
         List<Word> wordList = new ArrayList<Word>();
         int idColumnIndex = cursor.getColumnIndex(Database.COLUMN_ID);
         int fromColumnIndex = cursor.getColumnIndex(Database.COLUMN_FROM);
@@ -70,7 +70,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
     @Override
     public List<Word> getFavoriteWordList() {
         Cursor cursor = sqLiteDatabase.query(Util.getCurrentTableName(),new String[]{Database.COLUMN_ID, Database.COLUMN_FROM, Database.COLUMN_TO},
-                Database.COLUMN_FAVORITE + " = ?",new String[]{String.valueOf(1)},null,null,Database.COLUMN_FROM, String.valueOf(Configuration.MAX_DISPLAYABLE_FAVORITE_WORDS));
+                Database.COLUMN_FAVORITE + " = ?",new String[]{String.valueOf(1)},null,null,Database.COLUMN_FROM + " COLLATE NOCASE ASC", String.valueOf(Configuration.MAX_DISPLAYABLE_FAVORITE_WORDS));
         List<Word> favoriteWordList = new ArrayList<Word>();
         int idColumnIndex = cursor.getColumnIndex(Database.COLUMN_ID);
         int fromColumnIndex = cursor.getColumnIndex(Database.COLUMN_FROM);
@@ -85,7 +85,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
     @Override
     public List<String> getNameListByPrefixMatching(String prefix) {
         Cursor cursor = sqLiteDatabase.query(Util.getCurrentTableName(),new String[]{Database.COLUMN_FROM},
-                Database.COLUMN_FROM + " LIKE ?",new String[]{prefix + "%"},null,null,Database.COLUMN_FROM);
+                Database.COLUMN_FROM + " LIKE ?",new String[]{prefix + "%"},null,null,Database.COLUMN_FROM +" COLLATE NOCASE ASC");
         List<String> wordList = new ArrayList<String>();
         int fromColumnIndex = cursor.getColumnIndex(Database.COLUMN_FROM);
         while (cursor.moveToNext()){

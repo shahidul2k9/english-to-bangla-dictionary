@@ -2,7 +2,7 @@
 
 <a href="https://play.google.com/store/apps/details?id=com.shahidul.english.to.bangla.app">
   <img alt="Get it on Google Play"
-       src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
+       src="https://github.com/shahidul2k9/english-to-bangla-dictionary/blob/master/play_icon.png" />
 </a>
 
 
